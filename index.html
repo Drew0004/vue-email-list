@@ -27,12 +27,20 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
     </head>
 
-    <body>
-
+    <body class="bg-primary">
         <div id="app">
-            <ul>
-                <li v-for="(singleEmail, i) in email">{{singleEmail}}</li>
-            </ul>
+            <div class="container">
+                
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <h2 class="text-center my-3 text-white">Email generator</h2>
+                        <ul class="text-start fw-bold text-white">
+                            <li class="mb-3" v-for="(singleEmail, i) in email">{{i}} {{singleEmail}}</li>
+                        </ul>
+                    </div>
+                </div>
+            
+            </div>
         </div>
         
 
