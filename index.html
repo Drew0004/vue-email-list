@@ -34,7 +34,7 @@
                 <div class="row justify-content-center">
                     <div class="col-6">
                         <h2 class="text-center my-3 text-white">Email generator</h2>
-                        <ul class="text-start fw-bold text-white">
+                        <ul v-if="finished" class="text-start fw-bold text-white">
                             <li class="mb-3" v-for="(singleEmail, i) in email">{{i}} {{singleEmail}}</li>
                         </ul>
                     </div>

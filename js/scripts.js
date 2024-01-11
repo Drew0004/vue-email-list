@@ -3,7 +3,8 @@ const {createApp} = Vue;
 createApp({
   data() {
     return {
-		email:[]
+		email:[],
+    finished: false
     }
   },
     methods: {
@@ -18,6 +19,10 @@ createApp({
                 const emailResult = resp.data.response;
                 console.log(emailResult)
                 this.email.push(emailResult);
+
+                if(this.email.length == 10){
+                  this.finished = true
+                }
             });
         }
 
